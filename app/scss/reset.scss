@@ -1,0 +1,17 @@
+@mixin reset {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  button {
+    border-width: 0;
+    background-color: inherit;
+  }
+}
+* {
+  @include reset;
+  font-size: $fontsize;
+  color: $black;
+  font-family: $fontfamily;
+  box-sizing: border-box;
+}

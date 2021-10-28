@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/app.css">
+	<script type="module" src="js/app.js"> </script>
+	<title>idaproject-test BobrovKirill</title>
+</head>
+<body class="body waiting">
+	<header class="header">
+		<div class="header__container container">
+			<div class="header__body">
+				<h1 class="header__title">Добавление товара</h1>
+				<div class="header__controls">
+					<form action="#" class="header__form">
+						<select name="filters">
+							<option value="default" selected>По умолчанию</option>
+							<option >По убыванию цены</option>
+							<option >По возрастанию цены</option>
+						</select>
+					</form>
+					<button type="button" class="burger-menu">
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="main__container container">
+			<div class="main__form form-main">
+				<form action="#" class="form-main__body" method="POST">
+					<div class="form-main__items">
+						<div class="form-main__item req">
+							<label class="form-main__label required" for="name">Наименование товара</label>
+							<input class="form-main__input name" name="name" id="name" type="text" placeholder="Введите наименование товара"><span>Поле является обязательным</span>
+						</div>
+						<div class="form-main__item">
+							<label class="form-main__label" for="about">Описание товара</label>
+							<textarea class="form-main__input" name="about" id="about" rows="6" placeholder="Введите описание товара"></textarea>
+						</div>
+						<div class="form-main__item req">
+							<label class="form-main__label required" for="url">Ссылка на изображение товара</label>
+							<input class="form-main__input" name="url" id="url" type="url" placeholder="Введите ссылку"><span>Поле является обязательным</span>
+						</div>
+						<div class="form-main__item req">
+							<label class="form-main__label required" for="price">Цена товара</label>
+							<input class="form-main__input" name="price" id="price" type="text" placeholder="Введите цену"><span>Поле является обязательным</span>
+						</div>
+					</div>
+					<button type="submit" class="form-main__btn btn">Добавить товар</button>
+				</form>
+			</div>
+			<div class="main__products products-main">
+			</div>
+		</div>
+	</main>
+</body>
+</html>
