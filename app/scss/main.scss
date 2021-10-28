@@ -1,7 +1,7 @@
 .main {
   position: relative;
   margin-top: 1rem;
-  
+
   &__container {
     display: flex;
     @media (max-width: $md3) {
@@ -93,10 +93,10 @@
     color: $gray;
     font-size: 0.75rem;
     width: 100%;
-		transition: all 1s;
+    transition: all 1s;
     &.active {
       background-color: $greenAccents;
-			color: $white;
+      color: $white;
     }
   }
 }
@@ -114,8 +114,8 @@
     width: 332px;
     height: 423px;
     margin-left: 1rem;
-		opacity: 1;
-		transition: all 1.5s;
+    opacity: 1;
+    transition: all 1.5s;
     @media (max-width: $md4) {
       margin-left: 0;
     }
@@ -149,12 +149,12 @@
         opacity: 1;
       }
     }
-		&.del {
-			opacity: 0;
-		}
-		&.add {
-			opacity: 0;
-		}
+    &.del {
+      opacity: 0;
+    }
+    &.add {
+      opacity: 0;
+    }
   }
   &__img {
     height: 200px;
@@ -175,24 +175,24 @@
     font-weight: 600;
     line-height: 25px;
     margin-bottom: 1rem;
-		white-space:nowrap;
-		overflow:hidden;
-		text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &__text {
     flex: 1 1 120px;
     font-weight: 400;
     line-height: 20px;
-		text-overflow: ellipsis;
-		overflow:hidden;
-		word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
   }
   &__price {
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 30px;
-		white-space:nowrap;
-		overflow:hidden;
-		text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }

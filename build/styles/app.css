@@ -4,7 +4,7 @@
   text-decoration: none;
   list-style-type: none;
   font-size: 16px;
-  color: #3F3F3F;
+  color: #3f3f3f;
   font-family: "SourceSansPro", sans-serif;
   box-sizing: border-box; }
   * button {
@@ -12,7 +12,7 @@
     background-color: inherit; }
 
 body {
-  background-color: #E5E5E5; }
+  background-color: #e5e5e5; }
   body::before {
     content: '';
     position: absolute;
@@ -43,43 +43,40 @@ body {
   border-radius: 10px;
   transition: all 0.3s; }
   .btn.active {
-    color: #FFFFFF;
-    background-color: #7BAE73; }
+    color: #ffffff;
+    background-color: #7bae73; }
 
 .required::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: -2px;
   right: -4px;
   height: 4px;
   width: 4px;
-  background-color: #FF8484;
+  background-color: #ff8484;
   border-radius: 50%; }
 
 @font-face {
-  font-family: "icons";
+  font-family: 'icons';
   font-display: swap;
   src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: block; }
 
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "icons";
+[class^='icon-']:before,
+[class*=' icon-']:before {
+  font-family: 'icons';
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1; }
-
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
+  line-height: 1;
   display: block; }
 
 .icon-trash:before {
-  content: "\e900"; }
+  content: '\e900'; }
 
 .header__body {
   display: flex;
@@ -112,10 +109,10 @@ body {
 .header__form select {
   padding: 10px 15px;
   border-radius: 4px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-width: 0px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  color: #B4B4B4; }
+  color: #b4b4b4; }
 
 .burger-menu {
   display: none; }
@@ -135,7 +132,7 @@ body {
         right: 0;
         position: absolute;
         height: 2px;
-        background-color: #3F3F3F; }
+        background-color: #3f3f3f; }
       .burger-menu::before {
         content: '';
         top: 0;
@@ -187,7 +184,7 @@ body {
 
 .form-main {
   max-height: 440px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 4px;
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02); }
   .form-main__body {
@@ -205,9 +202,9 @@ body {
       left: 0;
       bottom: -14px;
       font-size: 0.5rem;
-      color: #FF8484; }
+      color: #ff8484; }
     .form-main__item.error input {
-      border: 1px solid #FF8484; }
+      border: 1px solid #ff8484; }
     .form-main__item.error span {
       display: block; }
   .form-main__label {
@@ -219,7 +216,7 @@ body {
   .form-main__input {
     width: 100%;
     padding: 10px 16px;
-    color: #B4B4B4;
+    color: #b4b4b4;
     font-size: 0.75rem;
     line-height: 15px;
     font-weight: 400;
@@ -228,14 +225,14 @@ body {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); }
   .form-main__btn {
     margin-top: 1.5rem;
-    background-color: #E5E5E5;
-    color: #B4B4B4;
+    background-color: #e5e5e5;
+    color: #b4b4b4;
     font-size: 0.75rem;
     width: 100%;
     transition: all 1s; }
     .form-main__btn.active {
-      background-color: #7BAE73;
-      color: #FFFFFF; }
+      background-color: #7bae73;
+      color: #ffffff; }
 
 .products-main {
   display: flex;
@@ -247,7 +244,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     width: 332px;
     height: 423px;
     margin-left: 1rem;
@@ -268,8 +265,8 @@ body {
       opacity: 0;
       justify-content: center;
       align-items: center;
-      background-color: #FF8484;
-      color: #FFFFFF;
+      background-color: #ff8484;
+      color: #ffffff;
       font-size: 1rem;
       font-weight: 400;
       border-radius: 10px;

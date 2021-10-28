@@ -1,14 +1,14 @@
 @mixin font($name, $type, $weight, $variant) {
-	@font-face {
-		font-weight: $weight;
-		font-family: $name;
-		src: url("../fonts/"+$type+".woff");
-		font-variant: $variant;
-	}
-};
+  @font-face {
+    font-weight: $weight;
+    font-family: $name;
+    src: url('../fonts/' + $type + '.woff');
+    font-variant: $variant;
+  }
+}
 
-@include font("SourceSansPro", "SourceSansPro-Regular", "400", "normal");
-@include font("SourceSansPro", "SourceSansPro-Bold", "700", "normal");
-@include font("SourceSansPro", "SourceSansPro-Medium", "500", "normal");
-@include font("SourceSansPro", "SourceSansPro-SemiBold", "600", "normal");
-@include font("icons", "icons", "400", "normal");
+@include font('SourceSansPro', 'SourceSansPro-Regular', '400', 'normal');
+@include font('SourceSansPro', 'SourceSansPro-Bold', '700', 'normal');
+@include font('SourceSansPro', 'SourceSansPro-Medium', '500', 'normal');
+@include font('SourceSansPro', 'SourceSansPro-SemiBold', '600', 'normal');
+@include font('icons', 'icons', '400', 'normal');

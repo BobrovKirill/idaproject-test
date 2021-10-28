@@ -1,27 +1,28 @@
-body{
-	background-color: $mainBG;
-	&::before {
+body {
+  background-color: $mainBG;
+  &::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.8) url("../images/loader.gif") center/ 60px no-repeat;
+    background: rgba(0, 0, 0, 0.8) url('../images/loader.gif') center/ 60px
+      no-repeat;
     z-index: 100;
     opacity: 0;
     visibility: hidden;
-		transition: all 1s;
+    transition: all 1s;
   }
   &.waiting::before {
     opacity: 1;
     visibility: visible;
   }
 }
-.container{
-	max-width: $containerMaxWidth;
-	padding: 0 32px;
-	margin: 0 auto;
+.container {
+  max-width: $containerMaxWidth;
+  padding: 0 32px;
+  margin: 0 auto;
 }
 .btn {
   display: inline-flex;
@@ -29,23 +30,23 @@ body{
   align-items: center;
   padding: 10px 0;
   text-align: center;
-	border-radius: 10px;
+  border-radius: 10px;
   transition: all 0.3s;
-    &.active {
-      color: $white;
+  &.active {
+    color: $white;
     background-color: $greenAccents;
-    }
+  }
 }
 .required {
-	&::before {
-		content: "";
-		display: block;
-		position: absolute;
-		top: -2px;
-		right: -4px;
-		height: 4px;
-		width: 4px;
-		background-color: $redAccents;
-		border-radius: 50%;
-	}
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -2px;
+    right: -4px;
+    height: 4px;
+    width: 4px;
+    background-color: $redAccents;
+    border-radius: 50%;
+  }
 }

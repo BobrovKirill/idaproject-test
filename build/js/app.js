@@ -59,9 +59,9 @@ document.addEventListener('DOMContentLoaded', function (e) {
       target.closest('.products-main__card').classList.add('del');
       const del = (cardId) =>
         document.querySelector(`[data-id ="${cardId}"]`).remove();
-				setTimeout(del, 900, cardId);
+      setTimeout(del, 900, cardId);
 
-			//deleteCardToJson(file, cardId) - не победил
+      //deleteCardToJson(file, cardId) - не победил
     }
   }
 
@@ -77,14 +77,13 @@ document.addEventListener('DOMContentLoaded', function (e) {
       const productMain = document.querySelector('.products-main');
       const formData = new FormData(e.target);
       const obj = Object.fromEntries(formData);
-			const addCssClass = 'add'
-      const template = renderNewCard(obj,addCssClass);
+      const addCssClass = 'add';
+      const template = renderNewCard(obj, addCssClass);
       //addCardToJson(file, obj); - не победил
       productMain.insertAdjacentHTML('beforeend', template);
-			const newCard = document.querySelector('.add');
-			const add = (newCard) =>
-			newCard.classList.remove('add')
-				setTimeout(add, 900, newCard);
+      const newCard = document.querySelector('.add');
+      const add = (newCard) => newCard.classList.remove('add');
+      setTimeout(add, 900, newCard);
       mainForm.reset();
       document.querySelector('.form-main__btn').classList.remove('active');
     }
@@ -92,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
   // RENDER CARD
 
-  function renderNewCard(obj,addCssClass) {
+  function renderNewCard(obj, addCssClass) {
     const { name, about, url, price, id } = obj;
 
     return `
