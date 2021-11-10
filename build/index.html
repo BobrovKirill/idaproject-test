@@ -14,13 +14,22 @@
         <div class="header__body">
           <h1 class="header__title">Добавление товара</h1>
           <div class="header__controls">
-            <form action="#" class="header__form">
-              <select name="filters">
-                <option value="default" selected>По умолчанию</option>
-                <option>По убыванию цены</option>
-                <option>По возрастанию цены</option>
-              </select>
-            </form>
+            <div class="header__dropdown dropdown-header">
+              <button
+                class="dropdown-header__btn icon-arrow-down"
+                data-dropdown="default"
+              >
+                По умолчанию
+              </button>
+              <ul class="dropdown-header__list">
+                <li class="dropdown-header__link" data-dropdown="max">
+                  <a href="#">По убыванию</a>
+                </li>
+                <li class="dropdown-header__link" data-dropdown="min">
+                  <a href="#">По возрастанию</a>
+                </li>
+              </ul>
+            </div>
             <button type="button" class="burger-menu">
               <span></span>
             </button>

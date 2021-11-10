@@ -78,7 +78,7 @@
     width: 100%;
     padding: 10px 16px;
 
-    color: $gray;
+    color: $black;
     font-size: 0.75rem;
     line-height: 15px;
     font-weight: 400;
@@ -86,6 +86,9 @@
     border-radius: 4px;
     border-width: 0;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+		&::placeholder{
+			color: $gray;
+		}
   }
   &__btn {
     margin-top: 1.5rem;
