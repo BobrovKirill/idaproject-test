@@ -1,6 +1,7 @@
 .main {
+	background-color: $mainBG;
   position: relative;
-  margin-top: 1rem;
+  padding-top: 1rem;
 
   &__container {
     display: flex;
@@ -28,6 +29,7 @@
   }
   &__products {
     flex: 1 1 1044 / 1440 * 100%;
+		margin-left: 16px;
   }
 }
 .form-main {
@@ -66,6 +68,10 @@
         display: block;
       }
     }
+		& textarea {
+			min-height: 108px;
+			margin-top: -3px;
+		}
   }
   &__label {
     position: relative;
@@ -116,8 +122,9 @@
     background-color: $white;
     width: 332px;
     height: 423px;
-    margin-left: 1rem;
+    margin-right: 1rem;
     opacity: 1;
+		border-radius: 4px;
     transition: all 1.5s;
     @media (max-width: $md4) {
       margin-left: 0;
@@ -131,6 +138,7 @@
       right: -8px;
       height: 32px;
       width: 32px;
+			z-index: 3;
 
       display: none;
       opacity: 0;
@@ -160,18 +168,32 @@
     }
   }
   &__img {
+		position: relative;
     height: 200px;
+		border-radius: 4px 4px 0 0;
+		overflow: hidden;
+		background-color: $gray;
     & img {
+			position: absolute;
       object-fit: cover;
       height: 100%;
       width: 100%;
+			z-index: 2;
     }
+		& span {
+			position: absolute;
+			z-index: 1;
+			color: $white;
+			font-size: 1rem;
+			top: 45%;
+			left: 20%;
+		}
   }
   &__content {
     display: flex;
     flex-direction: column;
     flex: 1 1 120px;
-    padding: 1rem 1.5rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
   }
   &__title {
     font-size: 1.25rem;
@@ -186,11 +208,12 @@
     flex: 1 1 120px;
     font-weight: 400;
     line-height: 20px;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    overflow-x: hidden;
+		font-size: 1rem;
     word-break: break-all;
   }
   &__price {
+		margin-top: 1rem;
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 30px;

@@ -1,5 +1,4 @@
 body {
-  background-color: $mainBG;
   &::before {
     content: '';
     position: absolute;
@@ -21,7 +20,7 @@ body {
 }
 .container {
   max-width: $containerMaxWidth;
-  padding: 0 32px;
+  padding: 0 16px 0 32px;
   margin: 0 auto;
 }
 .btn {

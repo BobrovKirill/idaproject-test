@@ -9,25 +9,28 @@ document.addEventListener('DOMContentLoaded', function (e) {
   // VALIDATE BUTTON FORM
   const requiredList = document.querySelectorAll('.req');
   requiredList.forEach((el) => {
-    el.addEventListener('change', ({ target }) => {
+    el.addEventListener('input', ({ target }) => {
       const input = target;
       if (input.getAttribute('name') === 'price') {
         chectPrice(input);
         chectButtonForm();
+      } else if (input.getAttribute('name') === 'url') {
+        chectUrl(input);
       } else if (input.value.length > 0) {
         input.classList.add('done');
         chectButtonForm();
+      } else {
+        input.classList.remove('done');
+				chectButtonForm();
       }
     });
   });
 
   function chectButtonForm() {
-    const doneList = document.querySelectorAll('.done');
-    if (doneList.length === 3) {
+    if (document.querySelectorAll('.done').length === 3) {
       document.querySelector('.form-main__btn').classList.add('active');
-      doneList.forEach((el) => {
-        el.classList.remove('done');
-      });
+    } else {
+      document.querySelector('.form-main__btn').classList.remove('active');
     }
   }
 
@@ -37,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
       input.classList.add('done');
     } else {
       input.value = null;
+      input.classList.remove('done');
     }
   }
 
@@ -45,7 +49,18 @@ document.addEventListener('DOMContentLoaded', function (e) {
   }
 
   function formatPrice(price) {
-    return price.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    return price.replace(/\s/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+  }
+
+  function chectUrl(url) {
+    console.log(url.checkValidity() && url.value.length > 1);
+    if (url.checkValidity() && url.value.length > 1) {
+      url.classList.add('done');
+      chectButtonForm();
+    } else {
+      url.classList.remove('done');
+      chectButtonForm();
+    }
   }
 
   //DELETE CARD
@@ -72,6 +87,10 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
     let error = valideteInput(requiredList);
     if (!error) {
+      document.querySelectorAll('.done').forEach((el) => {
+        el.classList.remove('done');
+      });
+
       const file = 'https://api.jsonbin.io/v3/b/617a607aaa02be1d445fed66/2';
       document.querySelector('.form-main__btn').classList.add('active');
       const productMain = document.querySelector('.products-main');
@@ -97,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
     return `
 		<a data-id = ${id} href="#" class="products-main__card ${addCssClass} icon-trash">
 		<div class="products-main__img">
+			<span>Изображение не найдено</span>
 			<img src=${url} alt="product images">
 		</div>
 		<div class="products-main__content">
